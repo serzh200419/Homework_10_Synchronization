@@ -1,0 +1,8 @@
+Short answer:
+
+If the semaphore is initialized to 1, only one thread can print at a time,
+which simulates having only one printer. If it is initialized to a value
+larger than the actual number of printers, more threads will enter the
+printing section than allowed, violating the resource limit and producing
+incorrect behavior.
+

@@ -1,18 +1,37 @@
---- RESULT ---
+Results:
+
+Mutex Short:
+
+RESULT:
 Final balance: 0
 Elapsed time: 0.1350 sec
-serzhg@ubuntu-aua-os:~/Homework_10_Synchronization/problem2$ ./bank spin short
 
---- RESULT ---
+
+Spin short:
+
+RESULT:
 Final balance: 0
 Elapsed time: 0.6345 sec
-serzhg@ubuntu-aua-os:~/Homework_10_Synchronization/problem2$ ./bank mutex long
 
---- RESULT ---
+
+Mutex long:
+
+RESULT:
 Final balance: 0
 Elapsed time: 679.2926 sec
-serzhg@ubuntu-aua-os:~/Homework_10_Synchronization/problem2$ ./bank spin long
 
---- RESULT ---
+
+Spin long:
+
+RESULT:
 Final balance: 0
 Elapsed time: 801.0997 sec
+
+
+Short Answer:
+Mutexes put a thread to sleep when the lock is busy, while spinlocks 
+continuously spin and consume CPU. For short critical sections, spinning 
+is fast because threads do not block. But for long critical sections 
+(spending time inside the lock), spinlocks waste CPU cycles and perform 
+much worse than mutexes.
+

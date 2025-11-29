@@ -1,0 +1,20 @@
+Broken counter
+
+A) No syncronization 
+
+Expected: 4000000
+Actual:   1072264
+
+B) Mutex
+
+Expected: 4000000
+Actual:   4000000
+
+C) Spinlock
+
+Expected: 4000000
+Actual:   4000000
+
+
+Short answer:
+No syncronization returns wrong result because multiple threads update the shared varaible at the same time which causes updates to loose. Mutex and spinlock serialize access to adding to value of counter, which bring to the point that only one thread can be modify it at a time. That is why they returned correct final value. 

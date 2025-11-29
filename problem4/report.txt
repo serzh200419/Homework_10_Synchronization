@@ -1,0 +1,7 @@
+Short answer:
+
+Using sleep() is not reliable for ordering because thread scheduling in 
+the OS is nondeterministic. Even if one thread sleeps, other threads may 
+run earlier or later than expected, producing incorrect interleaving. 
+Semaphores enforce exact ordering strictly and deterministically.
+

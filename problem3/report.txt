@@ -1,0 +1,7 @@
+Short answer:
+
+Semaphores ensure that producers do not insert into a full buffer 
+and consumers do not read from an empty buffer. However, the mutex 
+is still required because buffer[], in_pos, and out_pos are shared 
+variables. Even if semaphores control how many items exist, we still 
+must protect concurrent access to the shared circular buffer.
