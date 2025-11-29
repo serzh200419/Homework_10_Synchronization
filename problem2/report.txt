@@ -1,0 +1,18 @@
+--- RESULT ---
+Final balance: 0
+Elapsed time: 0.1350 sec
+serzhg@ubuntu-aua-os:~/Homework_10_Synchronization/problem2$ ./bank spin short
+
+--- RESULT ---
+Final balance: 0
+Elapsed time: 0.6345 sec
+serzhg@ubuntu-aua-os:~/Homework_10_Synchronization/problem2$ ./bank mutex long
+
+--- RESULT ---
+Final balance: 0
+Elapsed time: 679.2926 sec
+serzhg@ubuntu-aua-os:~/Homework_10_Synchronization/problem2$ ./bank spin long
+
+--- RESULT ---
+Final balance: 0
+Elapsed time: 801.0997 sec
